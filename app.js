@@ -3,6 +3,7 @@ import morgan from "morgan";  // logger
 import helmet from "helmet";  // security
 import bodyParser from "body-parser";
 import cookieParser from "cookie-parser";
+import { userRouter } from "./router";
 
 const app = express();
 
@@ -22,4 +23,7 @@ app.get("/",  handleHome);
 
 app.get("/profile", handleProfile);
 
+app.use("/user", userRouter);
 
+// 파일 임포트시 app object를 넘긴다.
+export default app;
