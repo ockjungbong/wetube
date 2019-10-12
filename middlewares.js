@@ -3,10 +3,10 @@ import routes from "./routes";
 export const localMiddleware = (req, res, next) => {
     res.locals.siteName = "WeTube";
     res.locals.routes = routes;
-    console.log("")
-    console.log("localMiddleware");
-    console.log("")
-    
+    res.locals.user = {
+        isAuthenticated: true,
+        id: 1
+    }
     // 다음 함수로 넘어간다
     next();
 };

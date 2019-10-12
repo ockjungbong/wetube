@@ -27,12 +27,26 @@ const routes = {
     logout : LOGOUT, 
     search : SEARCH,
     users : USERS,
-    userDetail : USER_DETAIL,
+    userDetail : id => {
+        if (id) {
+            return `/users/${id}`;
+        } else {
+            return USER_DETAIL;
+        } 
+    },
     editProfile : EDIT_PROFILE,
     changePassword : CHANGE_PASSWORD,
     videos : VIDEOS,
     upload : UPLOAD,
-    videoDetail : VIDEO_DETAIL,
+    videoDetail : id => {
+        if (id) {
+            console.log('video.id is not null');
+            return `/videos/${id}`
+        } else {
+            console.log('video.id is null');
+            return VIDEO_DETAIL;
+        }
+    },
     editVideo : EDIT_VIDEO,
     deleteVideo : DELETE_VIDEO
 };
