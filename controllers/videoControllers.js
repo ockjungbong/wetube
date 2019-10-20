@@ -1,4 +1,3 @@
-import {videoArray} from "../db"
 import routes from "../routes";
 
 export const home = (req, res) => {
