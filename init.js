@@ -1,7 +1,11 @@
 import "./db";
 import app from "./app";
+import dotenv from "dotenv";
+dotenv.config();
+import "./models/Video";
 
-const PORT = 4000;
+// 이런 식으로 key를 숨긴다.
+const PORT = process.env.PORT || 4000;;
 
 const handleListening = () => 
     console.log(`★ Listening on : http://localhost:${PORT}`);

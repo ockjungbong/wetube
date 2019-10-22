@@ -1,8 +1,8 @@
 {
   "name": "wetube",
   "version": "1.0.0",
-  "description": "Cloing Youtue with Vanilla and NodeJS",
-  "main": "index.js",
+  "description": "Cloning Youtue with Vanilla and NodeJS",
+  "main": "init.js",
   "author": "",
   "dependencies": {
     "@babel/core": "^7.6.2",
