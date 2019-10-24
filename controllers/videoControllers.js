@@ -1,7 +1,17 @@
 import routes from "../routes";
+import Video from "../models/Video";
 
-export const home = (req, res) => {
-    res.render("Home", { pageTitle : "Home", videoArray });
+// async : 특정 function의 어떤 부분을 기다리게 함
+export const home = async(req, res) => {
+    try {
+        // await 부분이 끝나기 전까지는 render 실행하지 않음
+        const videos = await Video.find({});
+        res.render("Home", { pageTitle : "Home", videos });
+     } catch (error) {
+         console.log(error);
+         // error가 발생하면 videos 기본값 빈 배열
+         res.render("Home", { pageTitle : "Home", videos: [] });
+     }
 };
 
 export const search = (req, res) => {
