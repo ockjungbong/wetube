@@ -40,10 +40,8 @@ const routes = {
     upload : UPLOAD,
     videoDetail : id => {
         if (id) {
-            console.log('video.id is not null');
             return `/videos/${id}`
         } else {
-            console.log('video.id is null');
             return VIDEO_DETAIL;
         }
     },

@@ -12,6 +12,8 @@ import routes from "./routes";
 const app = express();
 
 app.set("view engine", "pug");
+app.use("/upload", express.static("upload"));
+
 // 쿠기를 전달받아서 사용할 수 있게 해준다.
 app.use(cookieParser());
 app.use(bodyParser.json());
