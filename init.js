@@ -5,6 +5,8 @@ dotenv.config();
 import "./models/Video";
 import "./models/Comment";
 
+// test
+
 // 이런 식으로 key를 숨긴다.
 const PORT = process.env.PORT || 4000;;
 
