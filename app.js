@@ -11,6 +11,7 @@ import routes from "./routes";
 
 const app = express();
 
+app.use(helmet());
 app.set("view engine", "pug");
 app.use("/upload", express.static("upload"));
 
