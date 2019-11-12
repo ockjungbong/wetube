@@ -13,7 +13,7 @@ const app = express();
 
 app.use(helmet());
 app.set("view engine", "pug");
-app.use("/upload", express.static("upload"));
+app.use("/uploads", express.static("uploads"));
 
 // 쿠기를 전달받아서 사용할 수 있게 해준다.
 app.use(cookieParser());
